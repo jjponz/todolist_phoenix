@@ -21,12 +21,6 @@ defmodule TodoListPhoenix.Todos do
     Repo.all(Todo)
   end
 
-  def create_todo(attrs \\ %{}) do
-      %Todo{}
-      |> Todo.changeset(attrs)
-      |> Repo.insert()
-  end
-
   @doc """
   Gets a single todo.
 
