@@ -11,14 +11,6 @@ defmodule TodoListPhoenix.Todos do
   @doc """
   Returns the list of todo.
 
-  ## Examples
-
-      iex> list_todo()
-      [%Todo{}, ...]
-
-  """
-
-
   @doc """
   Gets a single todo.
 
