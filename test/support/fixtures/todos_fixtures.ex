@@ -16,7 +16,7 @@ defmodule TodoListPhoenix.TodosFixtures do
         description: "some description",
         name: "some name"
       })
-      |> CreateTodo.create_todo
+      |> CreateTodo.execute
 
     todo
   end

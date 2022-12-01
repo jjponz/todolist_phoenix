@@ -4,7 +4,7 @@ defmodule TodoListPhoenix.Todos.Actions.CreateTodo do
 
   alias TodoListPhoenix.Todos.Domain.Todo
 
-  def create_todo(attrs \\ %{}) do
+  def execute(attrs \\ %{}) do
       %Todo{}
       |> Todo.changeset(attrs)
       |> Repo.insert()
