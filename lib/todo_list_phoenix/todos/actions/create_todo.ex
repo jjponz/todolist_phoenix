@@ -1,4 +1,4 @@
-defmodule TodoListPhoenix.Todos.Actions do
+defmodule TodoListPhoenix.Todos.Actions.CreateTodo do
   import Ecto.Query, warn: false
   alias TodoListPhoenix.Repo
 

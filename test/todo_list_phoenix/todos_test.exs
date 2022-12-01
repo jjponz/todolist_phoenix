@@ -5,7 +5,7 @@ defmodule TodoListPhoenix.TodosTest do
 
   describe "todo" do
     alias TodoListPhoenix.Todos.Domain.Todo
-    alias TodoListPhoenix.Todos.Actions
+    alias TodoListPhoenix.Todos.Actions.CreateTodo
 
     import TodoListPhoenix.TodosFixtures
 
@@ -24,13 +24,13 @@ defmodule TodoListPhoenix.TodosTest do
     test "create_todo/1 with valid data creates a todo" do
       valid_attrs = %{description: "some description", name: "some name"}
 
-      assert {:ok, %Todo{} = todo} = Actions.create_todo(valid_attrs)
+      assert {:ok, %Todo{} = todo} = CreateTodo.create_todo(valid_attrs)
       assert todo.description == "some description"
       assert todo.name == "some name"
     end
 
     test "create_todo/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Actions.create_todo(@invalid_attrs)
+      assert {:error, %Ecto.Changeset{}} = CreateTodo.create_todo(@invalid_attrs)
     end
 
     test "update_todo/2 with valid data updates the todo" do

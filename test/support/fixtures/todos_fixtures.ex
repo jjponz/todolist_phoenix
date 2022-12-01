@@ -4,6 +4,8 @@ defmodule TodoListPhoenix.TodosFixtures do
   entities via the `TodoListPhoenix.Todos` context.
   """
 
+  alias TodoListPhoenix.Todos.Actions.CreateTodo
+
   @doc """
   Generate a todo.
   """
@@ -14,7 +16,7 @@ defmodule TodoListPhoenix.TodosFixtures do
         description: "some description",
         name: "some name"
       })
-      |> TodoListPhoenix.Todos.Actions.create_todo()
+      |> CreateTodo.create_todo
 
     todo
   end
