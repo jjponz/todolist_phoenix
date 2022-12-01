@@ -6,6 +6,7 @@ defmodule TodoListPhoenix.TodosTest do
   describe "todo" do
     alias TodoListPhoenix.Todos.Domain.Todo
     alias TodoListPhoenix.Todos.Actions.CreateTodo
+    alias TodoListPhoenix.Todos.Actions.ListTodos
 
     import TodoListPhoenix.TodosFixtures
 
@@ -13,7 +14,7 @@ defmodule TodoListPhoenix.TodosTest do
 
     test "list_todo/0 returns all todo" do
       todo = todo_fixture()
-      assert Todos.list_todo() == [todo]
+      assert ListTodos.execute() == [todo]
     end
 
     test "get_todo!/1 returns the todo with given id" do

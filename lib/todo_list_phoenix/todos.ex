@@ -17,9 +17,7 @@ defmodule TodoListPhoenix.Todos do
       [%Todo{}, ...]
 
   """
-  def list_todo do
-    Repo.all(Todo)
-  end
+
 
   @doc """
   Gets a single todo.
