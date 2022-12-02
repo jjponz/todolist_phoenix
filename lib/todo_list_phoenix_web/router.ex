@@ -7,6 +7,7 @@ defmodule TodoListPhoenixWeb.Router do
 
   scope "/api", TodoListPhoenixWeb do
     pipe_through :api
+    get "/users", TodoController, :index
   end
 
   # Enables LiveDashboard only for development
